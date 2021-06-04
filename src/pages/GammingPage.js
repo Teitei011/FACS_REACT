@@ -9,24 +9,24 @@ import "./Gamming.css";
 
 const GammingPage = () => {
   return (
-    <main className="grid-container">
-      <div class="grid-item">
-        <Navbar />
-      </div>
-      <ButtonGroup
-        size="large"
-        color="primary"
-        aria-label="large outlined primary button group"
-        position="bottom"
-      >
-        <Button>Anger</Button>
-        <Button>Fear</Button>
-        <Button>Disgust</Button>
-        <Button>Comtempt</Button>
-        <Button>Joy</Button>
-        <Button>Surprise</Button>
-        <Button>Sadness</Button>
-      </ButtonGroup>
+    <main>
+   
+          <Navbar />
+        <ButtonGroup 
+        className="buttonGroup"
+          size="large"
+          color="primary"
+          aria-label="large outlined primary button group"
+          position="bottom"
+        >
+          <Button>Anger</Button>
+          <Button>Fear</Button>
+          <Button>Disgust</Button>
+          <Button>Comtempt</Button>
+          <Button>Joy</Button>
+          <Button>Surprise</Button>
+          <Button>Sadness</Button>
+        </ButtonGroup>
     </main>
   );
 };

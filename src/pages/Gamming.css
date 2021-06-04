@@ -1,5 +1,8 @@
-.grid-container{
+.main{
       display: grid;
-      display: inline-grid;
-
+      grid-template-areas:
+      "topbar topbar topbar"
+      "nothing content nothing"
+      "footer footer footer";
 }
+
