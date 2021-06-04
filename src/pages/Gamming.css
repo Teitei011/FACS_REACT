@@ -6,3 +6,12 @@
       "footer footer footer";
 }
 
+
+.header{
+      grid-area: topbar;
+}
+
+
+#buttonGroup{
+      grid-area: footer;
+}
