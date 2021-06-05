@@ -4,6 +4,7 @@
       "topbar topbar topbar"
       "nothing content nothing"
       "footer footer footer";
+      align-items: center;
 }
 
 
@@ -11,6 +12,10 @@
       grid-area: topbar;
 }
 
+
+.img{
+      grid-area: content;
+}
 
 #buttonGroup{
       grid-area: footer;

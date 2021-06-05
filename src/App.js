@@ -11,7 +11,7 @@ import GammingPage from "./pages/GammingPage";
 
 function App() {
   return (
-    <div className="App-header">
+    <div className="App">
       <Router>
         <Switch>
           <Route exact path="/">
