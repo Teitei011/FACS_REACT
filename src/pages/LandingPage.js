@@ -1,45 +1,55 @@
-import { Grid, Card } from "@material-ui/core";
-import Button from "@material-ui/core/Button";
-import ButtonGroup from "@material-ui/core/ButtonGroup";
-import { makeStyles } from "@material-ui/core/styles";
 import Intro from "../images/index.jpeg"; // gives image path
 import React from "react";
 import ReactDOM from "react-dom";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: "flex",
-    "& > *": {
-      margin: theme.spacing(1),
-    },
-  },
-}));
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+  .img{
+    width: 40rem;
+  }
+`;
+
+
+const Button = styled.button`
+  border-radius: 1rem;
+
+  background-color: black; /* Green */
+  border: none;
+  color: white;
+  padding: 0.5rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+`;
 
 const LadingPage = () => {
   return (
-    <Grid
-      container
-      direction="column"
-      justify="space-evenly"
-      alignItems="center"
-    >
-      <h1>FACS </h1>
+    <Wrapper>
+      <center>
+        <h1>FACS </h1>
+      </center>
 
-      <img src={Intro} alt="Intro"></img>
+      <img src={Intro} className="img" alt="Intro"></img>
 
-      <ButtonGroup
-        orientation="vertical"
-        color="primary"
-        aria-label="vertical contained primary button group"
-        variant="contained"
-      >
+      <div style={{ "margin-top": "1rem" }} />
+      <center>
+        <Link to="/gamming">
+          <Button className="btn">Começar</Button>
+        </Link>
+        <Link to="/tutorial">
+          <Button className="btn">Tutorial</Button>
+        </Link>
+      </center>
 
-          <Link to="/gamming" className="btn">Começar</Link>
-          <Link to="/tutorial" className="btn">Tutorial</Link>
 
-      </ButtonGroup>
-    </Grid>
+     
+    </Wrapper>
   );
 };
 

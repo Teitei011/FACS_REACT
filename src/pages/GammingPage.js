@@ -1,48 +1,49 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Button from "@material-ui/core/Button";
-import ButtonGroup from "@material-ui/core/ButtonGroup";
-import { makeStyles } from "@material-ui/core/styles";
 import Navbar from "../components/Navbar";
-import Grid from "@material-ui/core/Grid";
-import "./Gamming.css";
 import ExampleImage from "../images/emotion.jpg";
+import styled from "styled-components";
+
+const Wrapper = styled.div`
+  display: grid;
+  grid-template-rows: auto;
+  align-items: center;
+  justify-content: center;
+`;
+
+const ButtonGroup = styled.div`
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-top: 0.6rem;
+`;
+
+const Button = styled.button`
+  border-radius: 1rem;
+
+  background-color: black; /* Green */
+  border: none;
+  color: white;
+  padding: 0.5rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+`;
 
 const GammingPage = () => {
-
-  const useStyles = makeStyles((theme) => ({
-    root: {
-      flexGrow: 1,
-    },
-    menuButton: {
-      marginRight: theme.spacing(2),
-    },
-    title: {
-      flexGrow: 1,
-    },
-  }));
-  
   return (
-    <main>
-      <Navbar className="topbar" />
-
-  <Grid
-        container
-        direction="column"
-        justify="space-evenly"
-        alignItems="center"
-      >
-
-      <img src={ExampleImage} alt="ExampleImage" height="500rem"></img>
-
-      <ButtonGroup
-        className="buttonGroup"
-        size="large"
-        color="primary"
-        aria-label="large outlined primary button group"
-        position="bottom"
-      >
-        <Button>Anger</Button>
+    <Wrapper>
+      <Navbar className="navbar" />{" "}
+      <center>
+        <img
+          src={ExampleImage}
+          alt="ExampleImage"
+          className="image"
+          height="500rem"
+        ></img>
+      </center>
+      <ButtonGroup>
+        <Button >Anger</Button>
         <Button>Fear</Button>
         <Button>Disgust</Button>
         <Button>Comtempt</Button>
@@ -50,9 +51,7 @@ const GammingPage = () => {
         <Button>Surprise</Button>
         <Button>Sadness</Button>
       </ButtonGroup>
-
-      </ Grid >
-    </main>
+    </Wrapper>
   );
 };
 
